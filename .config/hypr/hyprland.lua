@@ -5,16 +5,23 @@
 hl.on("hyprland.start", function()
     hl.exec_cmd("vibepanel")
     hl.exec_cmd("hyprshell run")
-    hl.exec_cmd("hypridle")
+--    hl.exec_cmd("hypridle") --systemd managed
+--    hl.exec_cmd("crystal-dock") -- systemd managed
+--    hl.exec_cmd("qbittorrent-nox") -- systemd managed
+--    hl.exec_cmd("omp stats") --banned until it'll be patched to not open browser
+    hl.exec_cmd("openrgb --startminimized")
 --    hl.exec_cmd("easyeffects -w --service-mode")
 end)
 
 -- ── Environment ──────────────────────────────────────────────
 hl.env("XCURSOR_SIZE", "24")
+hl.env("XCURSOR_THEME", "oreo_spark_blue_cursors")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("QT_QPA_PLATFORMTHEME", "qt6ct")
+hl.env("QT_QPA_PLATFORM", "wayland")
+hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
+hl.env("GTK_THEME", "adw-gtk3-dark")
 
--- ── General Settings ─────────────────────────────────────────
 hl.config({
     general = {
         gaps_in  = 3,
@@ -52,7 +59,7 @@ hl.config({
         inactive_opacity = 1.0,
 
         shadow = {
-            enabled      = false,
+            enabled      = true,
             range        = 8,
             render_power = 3,
             color        = 0xaa1a1a1a,
@@ -62,7 +69,7 @@ hl.config({
         },
 
         blur = {
-            enabled            = false,
+            enabled            = true,
             size               = 8,
             passes             = 3,
             new_optimizations  = true,

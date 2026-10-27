@@ -16,7 +16,7 @@ for i, name in ipairs(workspace_names) do
 end
 
 -- ── Application launchers ────────────────────────────────────
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("ghostty"))
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("kitty"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + F4", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch exit"))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("Telegram"))
@@ -26,6 +26,8 @@ hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("hyprlauncher"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox"))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("chromium-browser-unstable"))
 hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("chromium-browser-unstable --app=https://www.google.com?udm=50"))
+hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd("chromium-browser-unstable --app=https://www.youtube.com"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("chromium-browser-unstable --app=https://open.spotify.com"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
 
 -- ── Window cycling ───────────────────────────────────────────

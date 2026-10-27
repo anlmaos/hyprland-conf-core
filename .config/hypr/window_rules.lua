@@ -52,3 +52,9 @@ hl.window_rule({
     match = { float = false, workspace = "f[1]s[false]" },
     rounding = 0,
 })
+
+-- Firefox transparency (background only) with blur
+hl.window_rule({
+    match = { class = "firefox" },
+    opacity = "0.88 override 0.88 override",
+})
