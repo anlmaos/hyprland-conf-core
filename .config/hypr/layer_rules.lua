@@ -17,12 +17,6 @@ hl.layer_rule({
     match = { namespace = "swaync" },
     blur = true,
 })
--- Layer rule for hypr-dock
-hl.layer_rule({
-    match = { namespace = "hypr-dock" },
-    blur = true,
-    no_anim = true,
-})
 
 -- No animations for overlay layers
 hl.layer_rule({
